@@ -4,25 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>CentOS搭建Hexo并部署在Github上 | 小鸡的成长之路</title>
+    <title>小鸡的成长之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="LittleJi">
     
 
     
-    <meta name="description" content="大家好，欢迎来到小鸡的乐园">
-<meta name="keywords" content="Hexo,CentOS,Linux,Github">
+    <meta name="description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS搭建Hexo并部署在Github上">
+<meta property="og:title" content="小鸡的成长之路">
 <meta property="og:url" content="http://yoursite.com/2017/10/06/growing/index.html">
 <meta property="og:site_name" content="小鸡的成长之路">
-<meta property="og:description" content="大家好，欢迎来到小鸡的乐园">
+<meta property="og:description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-06T12:40:59.937Z">
+<meta property="og:updated_time" content="2017-10-06T13:55:07.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS搭建Hexo并部署在Github上">
-<meta name="twitter:description" content="大家好，欢迎来到小鸡的乐园">
+<meta name="twitter:title" content="小鸡的成长之路">
+<meta name="twitter:description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
 
     
     <link rel="alternative" href="/atom.xml" title="小鸡的成长之路" type="application/atom+xml">
@@ -82,14 +81,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/10/06/growing/" title="CentOS搭建Hexo并部署在Github上" itemprop="url">CentOS搭建Hexo并部署在Github上</a>
+      <a href="/2017/10/06/growing/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="LittleJi" target="_blank" itemprop="author">LittleJi</a>
 		
   <p class="article-time">
-    <time datetime="2017-10-06T11:18:49.000Z" itemprop="datePublished"> 发表于 2017-10-06</time>
+    <time datetime="2017-10-06T13:55:07.288Z" itemprop="datePublished"> 发表于 2017-10-06</time>
     
   </p>
 </header>
@@ -98,21 +97,30 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS搭建Hexo并部署在Github上"><span class="toc-number">1.</span> <span class="toc-text">CentOS搭建Hexo并部署在Github上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">1.3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装git"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1 安装git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-注册github账号"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2 注册github账号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-配置git环境"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">3 配置git环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-生成ssh-key"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">4 生成ssh key</span></a></li></ol></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p><h>大家好，欢迎来到小鸡的乐园<h></h></h></p>
+		<h1 id="CentOS搭建Hexo并部署在Github上"><a href="#CentOS搭建Hexo并部署在Github上" class="headerlink" title="CentOS搭建Hexo并部署在Github上"></a>CentOS搭建Hexo并部署在Github上</h1><p>标签（空格分隔）： Hexo CentOS Linux Github</p>
+<hr>
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>一台CentOS7.4的主机</li>
+<li>安装git,注册github账号，配置git环境</li>
+<li>安装node.js</li>
+<li>安装npm</li>
+<li>安装hexo</li>
+</ul>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-安装git-注册github账号，配置git环境"><a href="#1-安装git-注册github账号，配置git环境" class="headerlink" title="1 安装git,注册github账号，配置git环境"></a>1 安装git,注册github账号，配置git环境</h3><h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1 安装git"></a>1 安装git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install git gcc gcc-c++ curl wget</div></pre></td></tr></table></figure>
+<h4 id="2-注册github账号"><a href="#2-注册github账号" class="headerlink" title="2 注册github账号"></a>2 注册github账号</h4><pre><code>我已经注册过了，注册流程不再叙述,https://github.com
+</code></pre><h4 id="3-配置git环境"><a href="#3-配置git环境" class="headerlink" title="3 配置git环境"></a>3 配置git环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;github用户名&quot;</div><div class="line">git config --global user.email &quot;github邮箱&quot;</div></pre></td></tr></table></figure>
+<h4 id="4-生成ssh-key"><a href="#4-生成ssh-key" class="headerlink" title="4 生成ssh key"></a>4 生成ssh key</h4><pre><code>目的是为了以后链接github时不用每次都输入用户名和密码
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">#然后一路回车，这时候会在 ~/.ssh/下生成两个ssh key</div><div class="line">#进入GitHub个人设置页面，点击SSH and GPGkeys 添加一个SSH key 题目自拟，内容复制以下输出：</div><div class="line">cat ~/.ssh/id_rsa.pub</div><div class="line">#测试一下是否成功了</div><div class="line">ssh -T git@github.com</div><div class="line">#如果输出Hi 用户名! You&apos;ve successfully authenticated, but GitHub does not provide shell access.则表示成功</div></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Hexo-CentOS-Linux-Github/">Hexo,CentOS,Linux,Github</a>
-  </div>
 
 </div>
 
@@ -120,7 +128,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/10/06/growing/" data-title="CentOS搭建Hexo并部署在Github上 | 小鸡的成长之路" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/10/06/growing/" data-title="小鸡的成长之路" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -153,7 +161,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS搭建Hexo并部署在Github上"><span class="toc-number">1.</span> <span class="toc-text">CentOS搭建Hexo并部署在Github上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">1.3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装git"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1 安装git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-注册github账号"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2 注册github账号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-配置git环境"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">3 配置git环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-生成ssh-key"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">4 生成ssh key</span></a></li></ol></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -167,17 +175,6 @@
   
 
   
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/Hexo-CentOS-Linux-Github/" title="Hexo,CentOS,Linux,Github">Hexo,CentOS,Linux,Github<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
