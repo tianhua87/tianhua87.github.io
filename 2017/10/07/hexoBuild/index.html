@@ -4,24 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>小鸡的成长之路</title>
+    <title>CentOS搭建Hexo并部署在Github上 | 小鸡的成长之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="LittleJi">
     
 
     
-    <meta name="description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
+    <meta name="description" content="什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境 安装node.js 安装npm 安装hexo  流程1 安装git,注册github账号，配置git环境 1 安装g">
+<meta name="keywords" content="Hexo,CentOS,Linux,Github">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小鸡的成长之路">
+<meta property="og:title" content="CentOS搭建Hexo并部署在Github上">
 <meta property="og:url" content="http://yoursite.com/2017/10/07/hexoBuild/index.html">
 <meta property="og:site_name" content="小鸡的成长之路">
-<meta property="og:description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
+<meta property="og:description" content="什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境 安装node.js 安装npm 安装hexo  流程1 安装git,注册github账号，配置git环境 1 安装g">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-07T01:43:55.146Z">
+<meta property="og:updated_time" content="2017-10-07T01:47:04.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小鸡的成长之路">
-<meta name="twitter:description" content="CentOS搭建Hexo并部署在Github上标签（空格分隔）： Hexo CentOS Linux Github  什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境">
+<meta name="twitter:title" content="CentOS搭建Hexo并部署在Github上">
+<meta name="twitter:description" content="什么是Hexo  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备工作 一台CentOS7.4的主机 安装git,注册github账号，配置git环境 安装node.js 安装npm 安装hexo  流程1 安装git,注册github账号，配置git环境 1 安装g">
 
     
     <link rel="alternative" href="/atom.xml" title="小鸡的成长之路" type="application/atom+xml">
@@ -81,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/10/07/hexoBuild/" title="" itemprop="url"></a>
+      <a href="/2017/10/07/hexoBuild/" title="CentOS搭建Hexo并部署在Github上" itemprop="url">CentOS搭建Hexo并部署在Github上</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="LittleJi" target="_blank" itemprop="author">LittleJi</a>
 		
   <p class="article-time">
-    <time datetime="2017-10-07T01:43:55.148Z" itemprop="datePublished"> 发表于 2017-10-07</time>
+    <time datetime="2017-10-07T01:47:04.415Z" itemprop="datePublished"> 发表于 2017-10-07</time>
     
   </p>
 </header>
@@ -97,13 +98,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS搭建Hexo并部署在Github上"><span class="toc-number">1.</span> <span class="toc-text">CentOS搭建Hexo并部署在Github上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">1.3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装node-js"><span class="toc-number">1.3.2.</span> <span class="toc-text">2 安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装npm"><span class="toc-number">1.3.3.</span> <span class="toc-text">3 安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-并初始化"><span class="toc-number">1.3.4.</span> <span class="toc-text">4 安装hexo,并初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-部署到github上"><span class="toc-number">1.3.5.</span> <span class="toc-text">5 部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.4.</span> <span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置文件-config-yml中的格式："><span class="toc-number">1.5.</span> <span class="toc-text">1. 配置文件_config.yml中的格式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-github地址的写法"><span class="toc-number">1.6.</span> <span class="toc-text">2. github地址的写法</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装node-js"><span class="toc-number">3.2.</span> <span class="toc-text">2 安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装npm"><span class="toc-number">3.3.</span> <span class="toc-text">3 安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-并初始化"><span class="toc-number">3.4.</span> <span class="toc-text">4 安装hexo,并初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-部署到github上"><span class="toc-number">3.5.</span> <span class="toc-text">5 部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">4.</span> <span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置文件-config-yml中的格式："><span class="toc-number">5.</span> <span class="toc-text">1. 配置文件_config.yml中的格式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-github地址的写法"><span class="toc-number">6.</span> <span class="toc-text">2. github地址的写法</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="CentOS搭建Hexo并部署在Github上"><a href="#CentOS搭建Hexo并部署在Github上" class="headerlink" title="CentOS搭建Hexo并部署在Github上"></a>CentOS搭建Hexo并部署在Github上</h1><p>标签（空格分隔）： Hexo CentOS Linux Github</p>
-<hr>
-<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+		<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>  Hexo 是一个基于 Node.js 的静态博客程序，它是一个快速、简洁且高效的博客框架。hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
 <li>一台CentOS7.4的主机</li>
 <li>安装git,注册github账号，配置git环境</li>
@@ -157,13 +156,18 @@
 <div class="article-catetags">
 
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Hexo-CentOS-Linux-Github/">Hexo,CentOS,Linux,Github</a>
+  </div>
+
 </div>
 
 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-title="小鸡的成长之路" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-title="CentOS搭建Hexo并部署在Github上 | 小鸡的成长之路" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -196,7 +200,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS搭建Hexo并部署在Github上"><span class="toc-number">1.</span> <span class="toc-text">CentOS搭建Hexo并部署在Github上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">1.3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装node-js"><span class="toc-number">1.3.2.</span> <span class="toc-text">2 安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装npm"><span class="toc-number">1.3.3.</span> <span class="toc-text">3 安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-并初始化"><span class="toc-number">1.3.4.</span> <span class="toc-text">4 安装hexo,并初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-部署到github上"><span class="toc-number">1.3.5.</span> <span class="toc-text">5 部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.4.</span> <span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置文件-config-yml中的格式："><span class="toc-number">1.5.</span> <span class="toc-text">1. 配置文件_config.yml中的格式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-github地址的写法"><span class="toc-number">1.6.</span> <span class="toc-text">2. github地址的写法</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-number">3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装git-注册github账号，配置git环境"><span class="toc-number">3.1.</span> <span class="toc-text">1 安装git,注册github账号，配置git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装node-js"><span class="toc-number">3.2.</span> <span class="toc-text">2 安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装npm"><span class="toc-number">3.3.</span> <span class="toc-text">3 安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-并初始化"><span class="toc-number">3.4.</span> <span class="toc-text">4 安装hexo,并初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-部署到github上"><span class="toc-number">3.5.</span> <span class="toc-text">5 部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">4.</span> <span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置文件-config-yml中的格式："><span class="toc-number">5.</span> <span class="toc-text">1. 配置文件_config.yml中的格式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-github地址的写法"><span class="toc-number">6.</span> <span class="toc-text">2. github地址的写法</span></a></li></ol>
  
   </div>
 
@@ -210,6 +214,17 @@
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Hexo-CentOS-Linux-Github/" title="Hexo,CentOS,Linux,Github">Hexo,CentOS,Linux,Github<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
