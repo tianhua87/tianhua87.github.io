@@ -71,8 +71,8 @@
   
     <article id="post-androidLittleError" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/18/androidLittleError/" class="article-date">
-  <time datetime="2017-10-18T01:37:14.913Z" itemprop="datePublished">2017-10-18</time>
+    <a href="/2017/10/19/androidLittleError/" class="article-date">
+  <time datetime="2017-10-19T09:51:06.520Z" itemprop="datePublished">2017-10-19</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/18/androidLittleError/">Android 小问题集锦</a>
+      <a class="article-title" href="/2017/10/19/androidLittleError/">Android 小问题集锦</a>
     </h1>
   
 
@@ -104,14 +104,18 @@
 <li><p>遇到的问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">向数据表中插入一条数据时，报了一个错误：</div><div class="line">android.database.sqlite.SQLiteException: table alarm has no column named time (Sqlite code 1): , while compiling: INSERT INTO alarm(name,date_list,isopened,time) VALUES (?,?,?,?), (OS error - 2:No such file or directory)</div></pre></td></tr></table></figure>
 </li>
-<li><p>最后发现是建表语句出了错，少了一个逗号<br><img src="/2017/10/18/androidLittleError/createTable.png" width="30%" height="30%"></p>
+<li><p>最后发现是建表语句出了错，少了一个逗号<br><img src="/2017/10/19/androidLittleError/createTable.png" width="30%" height="30%"></p>
 </li>
+</ul>
+<h2 id="3-RelativeLayout-相对布局错乱"><a href="#3-RelativeLayout-相对布局错乱" class="headerlink" title="3 RelativeLayout 相对布局错乱"></a>3 RelativeLayout 相对布局错乱</h2><ul>
+<li>问题：ImageView添加点击事件监听后没有效果，尝试了各种方法都无用，比如设置focusable为true，设置clickable为true，甚至换了成其他的控件Button、ImageButton，结果都没有用，怀疑是布局出了问题，最后才发现原来是外层是RelativeLayout，然后里面控件的相对布局又没有设置好，肉眼上又观察不到ImageView其实被其他控件遮挡了，所以导致ImageView的点击事件无效。</li>
+<li>解决方法：设置好控件之间的相对关系，防止控件互相遮掩。</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/18/androidLittleError/" data-id="cj8wdawun0000p73rbi3i9wje" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/19/androidLittleError/" data-id="cj8yadvor0000ly3r95nxst8k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Error/">Error</a></li></ul>
@@ -166,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/17/recyclerViewError/" data-id="cj8wdawvr0005p73rrgib7ooj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/17/recyclerViewError/" data-id="cj8yadvpc0005ly3rc86yld7a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Adapter/">Adapter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LayoutInflater/">LayoutInflater</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
@@ -231,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/16/radioGroup/" data-id="cj8wdawvo0004p73rmp9ivrzg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/16/radioGroup/" data-id="cj8yadvp80004ly3rz7tt1grh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RadioGroup/">RadioGroup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/check/">check</a></li></ul>
@@ -317,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-id="cj8wdawvj0003p73rvema0c1n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-id="cj8yadvp60003ly3ri7l05e76" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
@@ -364,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/05/hello-world/" data-id="cj8wdawv00001p73rkyftbh20" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/05/hello-world/" data-id="cj8yadvoz0001ly3rhfuyqdd2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -418,7 +422,7 @@
       <ul>
         
           <li>
-            <a href="/2017/10/18/androidLittleError/">Android 小问题集锦</a>
+            <a href="/2017/10/19/androidLittleError/">Android 小问题集锦</a>
           </li>
         
           <li>
