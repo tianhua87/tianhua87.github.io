@@ -69,6 +69,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-https包含http" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/25/https包含http/" class="article-date">
+  <time datetime="2017-11-25T10:50:27.144Z" itemprop="datePublished">2017-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/25/https包含http/">https 页面中引入 http 资源的解决方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="https-页面中引入-http资源，结果http资源无法加载"><a href="#https-页面中引入-http资源，结果http资源无法加载" class="headerlink" title="https 页面中引入 http资源，结果http资源无法加载"></a>https 页面中引入 http资源，结果http资源无法加载</h1><p>今天在将网站的http请求更换为https时，导致视频无法播放，查看了一下浏览器的console发现了如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Mixed Content: The page at &apos;https://localhost:8443/test1.html&apos; was loaded over HTTPS, but requested an insecure script &apos;http://vjs.zencdn.net/6.2.8/video.js&apos;. This request has been blocked; the content must be served over HTTPS.</div></pre></td></tr></table></figure></p>
+<p>原来浏览器默认是不允许在 https 里面引用 http 资源的，比如引入一个 js 文件，会被直接 block 掉的。</p>
+<p>#解决方法</p>
+<h2 id="1-相对协议"><a href="#1-相对协议" class="headerlink" title="1 相对协议"></a>1 相对协议</h2><p>去掉url前面的协议名”http:”或”https”,让浏览器自动去补齐，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://vjs.zencdn.net/6.2.8/video.js</div><div class="line">变为</div><div class="line">//vjs.zencdn.net/6.2.8/video.js</div></pre></td></tr></table></figure></p>
+<h2 id="2-使用-iframe"><a href="#2-使用-iframe" class="headerlink" title="2 使用 iframe"></a>2 使用 iframe</h2><p>使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。</p>
+<p>另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。</p>
+<p>参考：<a href="https://www.cnblogs.com/kabi/p/6186406.html" target="_blank" rel="external">https://www.cnblogs.com/kabi/p/6186406.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/25/https包含http/" data-id="cjaf7sroi0004b73rolux1gkl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/">https</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-androidLittleError" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/19/androidLittleError/" class="article-date">
@@ -115,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/19/androidLittleError/" data-id="cj8yadvor0000ly3r95nxst8k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/19/androidLittleError/" data-id="cjaf7srnw0000b73rhb2uq8zc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Error/">Error</a></li></ul>
@@ -170,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/17/recyclerViewError/" data-id="cj8yadvpc0005ly3rc86yld7a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/17/recyclerViewError/" data-id="cjaf7sron0007b73r0c7px8sn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Adapter/">Adapter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LayoutInflater/">LayoutInflater</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
@@ -235,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/16/radioGroup/" data-id="cj8yadvp80004ly3rz7tt1grh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/16/radioGroup/" data-id="cjaf7srol0005b73rdgn0h2ec" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RadioGroup/">RadioGroup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/check/">check</a></li></ul>
@@ -321,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-id="cj8yadvp60003ly3ri7l05e76" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/07/hexoBuild/" data-id="cjaf7srof0003b73rfep6drez" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
@@ -368,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/05/hello-world/" data-id="cj8yadvoz0001ly3rhfuyqdd2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/05/hello-world/" data-id="cjaf7sro70001b73roge8ldre" class="article-share-link">Share</a>
       
       
     </footer>
@@ -390,7 +435,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adapter/">Adapter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Error/">Error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LayoutInflater/">LayoutInflater</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RadioGroup/">RadioGroup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/check/">check</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adapter/">Adapter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Error/">Error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LayoutInflater/">LayoutInflater</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RadioGroup/">RadioGroup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/check/">check</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li></ul>
     </div>
   </div>
 
@@ -400,7 +445,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Adapter/" style="font-size: 10px;">Adapter</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LayoutInflater/" style="font-size: 10px;">LayoutInflater</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/RadioGroup/" style="font-size: 10px;">RadioGroup</a> <a href="/tags/RecyclerView/" style="font-size: 10px;">RecyclerView</a> <a href="/tags/ViewPager/" style="font-size: 10px;">ViewPager</a> <a href="/tags/check/" style="font-size: 10px;">check</a>
+      <a href="/tags/Adapter/" style="font-size: 10px;">Adapter</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LayoutInflater/" style="font-size: 10px;">LayoutInflater</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/RadioGroup/" style="font-size: 10px;">RadioGroup</a> <a href="/tags/RecyclerView/" style="font-size: 10px;">RecyclerView</a> <a href="/tags/ViewPager/" style="font-size: 10px;">ViewPager</a> <a href="/tags/check/" style="font-size: 10px;">check</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 10px;">https</a>
     </div>
   </div>
 
@@ -409,7 +454,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
     </div>
   </div>
 
@@ -420,6 +465,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/11/25/https包含http/">https 页面中引入 http 资源的解决方式</a>
+          </li>
         
           <li>
             <a href="/2017/10/19/androidLittleError/">Android 小问题集锦</a>
@@ -435,10 +484,6 @@
         
           <li>
             <a href="/2017/10/07/hexoBuild/">CentOS搭建Hexo并部署在Github上</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/05/hello-world/">Hello World</a>
           </li>
         
       </ul>
