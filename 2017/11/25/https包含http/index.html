@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="小鸡的成长之路">
 <meta property="og:description" content="https 页面中引入 http资源，结果http资源无法加载今天在将网站的http请求更换为https时，导致视频无法播放，查看了一下浏览器的console发现了如下错误：1Mixed Content: The page at &amp;apos;https://localhost:8443/test1.html&amp;apos; was loaded over HTTPS, but requested an">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-25T10:50:27.143Z">
+<meta property="og:updated_time" content="2017-11-25T10:54:41.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="https 页面中引入 http 资源的解决方式">
 <meta name="twitter:description" content="https 页面中引入 http资源，结果http资源无法加载今天在将网站的http请求更换为https时，导致视频无法播放，查看了一下浏览器的console发现了如下错误：1Mixed Content: The page at &amp;apos;https://localhost:8443/test1.html&amp;apos; was loaded over HTTPS, but requested an">
@@ -72,7 +72,7 @@
         <section id="main"><article id="post-https包含http" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/25/https包含http/" class="article-date">
-  <time datetime="2017-11-25T10:50:27.144Z" itemprop="datePublished">2017-11-25</time>
+  <time datetime="2017-11-25T10:54:41.285Z" itemprop="datePublished">2017-11-25</time>
 </a>
     
   </div>
@@ -91,18 +91,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="https-页面中引入-http资源，结果http资源无法加载"><a href="#https-页面中引入-http资源，结果http资源无法加载" class="headerlink" title="https 页面中引入 http资源，结果http资源无法加载"></a>https 页面中引入 http资源，结果http资源无法加载</h1><p>今天在将网站的http请求更换为https时，导致视频无法播放，查看了一下浏览器的console发现了如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Mixed Content: The page at &apos;https://localhost:8443/test1.html&apos; was loaded over HTTPS, but requested an insecure script &apos;http://vjs.zencdn.net/6.2.8/video.js&apos;. This request has been blocked; the content must be served over HTTPS.</div></pre></td></tr></table></figure></p>
+        <h2 id="https-页面中引入-http资源，结果http资源无法加载"><a href="#https-页面中引入-http资源，结果http资源无法加载" class="headerlink" title="https 页面中引入 http资源，结果http资源无法加载"></a>https 页面中引入 http资源，结果http资源无法加载</h2><p>今天在将网站的http请求更换为https时，导致视频无法播放，查看了一下浏览器的console发现了如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Mixed Content: The page at &apos;https://localhost:8443/test1.html&apos; was loaded over HTTPS, but requested an insecure script &apos;http://vjs.zencdn.net/6.2.8/video.js&apos;. This request has been blocked; the content must be served over HTTPS.</div></pre></td></tr></table></figure></p>
 <p>原来浏览器默认是不允许在 https 里面引用 http 资源的，比如引入一个 js 文件，会被直接 block 掉的。</p>
-<p>#解决方法</p>
-<h2 id="1-相对协议"><a href="#1-相对协议" class="headerlink" title="1 相对协议"></a>1 相对协议</h2><p>去掉url前面的协议名”http:”或”https”,让浏览器自动去补齐，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://vjs.zencdn.net/6.2.8/video.js</div><div class="line">变为</div><div class="line">//vjs.zencdn.net/6.2.8/video.js</div></pre></td></tr></table></figure></p>
-<h2 id="2-使用-iframe"><a href="#2-使用-iframe" class="headerlink" title="2 使用 iframe"></a>2 使用 iframe</h2><p>使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。</p>
+<p>##解决方法</p>
+<h3 id="1-相对协议"><a href="#1-相对协议" class="headerlink" title="1 相对协议"></a>1 相对协议</h3><p>去掉url前面的协议名”http:”或”https”,让浏览器自动去补齐，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://vjs.zencdn.net/6.2.8/video.js</div><div class="line">变为</div><div class="line">//vjs.zencdn.net/6.2.8/video.js</div></pre></td></tr></table></figure></p>
+<h3 id="2-使用-iframe"><a href="#2-使用-iframe" class="headerlink" title="2 使用 iframe"></a>2 使用 iframe</h3><p>使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。</p>
 <p>另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。</p>
 <p>参考：<a href="https://www.cnblogs.com/kabi/p/6186406.html" target="_blank" rel="external">https://www.cnblogs.com/kabi/p/6186406.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/25/https包含http/" data-id="cjaf7sroi0004b73rolux1gkl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/25/https包含http/" data-id="cjaf7y6p50004bz3rvfrc9cla" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/">https</a></li></ul>
